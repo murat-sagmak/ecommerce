@@ -1,21 +1,21 @@
-FROM centos:latest
+FROM ubuntu:latest
 
 LABEL maintainer="Murat muratsagmak01@gmail.com"
 
 WORKDIR /app
 
-RUN yum update -y && \
-    yum install -y \
+RUN apt-get update && \
+    apt-get install -y \
     wget \
     tar \
     gzip \
     gcc \
     make \
-    && yum clean all
+    && rm -rf /var/lib/apt/lists/*
 
 COPY . /app
 
-RUN echo "Merhaba, Dockerfile ile oluşturulan bir CentOS konteyneri!"
+RUN echo "Merhaba, Dockerfile ile oluşturulan bir Ubuntu konteyneri!"
 
 CMD ["echo", "Konteyner başlatıldı. Örnek bir komut çalıştırılıyor."]
 
