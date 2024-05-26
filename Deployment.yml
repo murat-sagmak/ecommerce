@@ -1,0 +1,19 @@
+kind: Deployment
+appiVersion: apps/v1
+metadata:
+  name: ecommerce
+spec:
+  replicas: 2
+  selector: 
+    matchLabels:
+      app: ecommerce
+  template:
+    metadata:
+      labels:
+        app: ecommerce
+    spec:
+      containers: 
+        image: muratt01/pipeline
+        imagePullPolicy: Always
+        ports:
+          containerPort: 80
