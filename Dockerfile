@@ -18,3 +18,5 @@ COPY . /app
 RUN echo "Merhaba, Dockerfile ile oluşturulan bir CentOS konteyneri!"
 
 CMD ["echo", "Konteyner başlatıldı. Örnek bir komut çalıştırılıyor."]
+
+EXPOSE 80 22
