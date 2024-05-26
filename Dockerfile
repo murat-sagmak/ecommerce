@@ -1,4 +1,4 @@
-FROM centos:8
+FROM centos:latest
 
 LABEL maintainer="Murat muratsagmak01@gmail.com"
 
